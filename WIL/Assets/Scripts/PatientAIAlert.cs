@@ -5,39 +5,33 @@ using UnityEngine;
 public class PatientAIAlert : MonoBehaviour
 {
     /***************************************************************************************
-* Title: Stealth
-* Author: BlackThornProd
-* Date: 2018
+* Title: Unity 5 - How To Spawn Objects Using a Trigger
+* Author: Lurony
+* Date: 2016
 * Code version: N/A
-* Availability: https://www.youtube.com/watch?v=GPrGg8UDB_E
+* Availability: youtube.com/watch?v=_Xrw2EEhzI4
 ***************************************************************************************/
-    public float rotationSpeed;
-    public float distance;
+    public Transform spawnpoint;
+    public GameObject Prefab;
 
     // Start is called before the first frame update
     void Start()
     {
         Physics2D.queriesStartInColliders = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
-        if (hitInfo.collider != null)
-        {
-            Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-        }
+        
+    }
 
-        if (hitInfo.collider.CompareTag("Player"))
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
         {
-            //Instantiate<Circle>();
-        }
-
-        else
-        {
-            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
+            Instantiate(Prefab, spawnpoint.position, spawnpoint.rotation);
         }
     }
 }

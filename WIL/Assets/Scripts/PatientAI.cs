@@ -41,4 +41,13 @@ public class PatientAI : MonoBehaviour
             Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(other.gameObject);
+            FindObjectOfType<GameManager>().EndGame();
+        }
+    }
 }
