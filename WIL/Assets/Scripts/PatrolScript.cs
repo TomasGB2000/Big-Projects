@@ -12,7 +12,7 @@ public class PatrolScript : MonoBehaviour
 * Availability: https://www.youtube.com/watch?v=8eWbSN2T8TE
 ***************************************************************************************/
     public float speed;
-    public float waitTime;
+    private float waitTime;
     public float startWaitTime;
 
     public Transform[] moveSpots;

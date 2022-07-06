@@ -6,6 +6,10 @@ public class NurseAI : MonoBehaviour
 {
     public float speed = 3f;
     Transform target;
+    void Start()
+    {
+        
+    }
 
     void Update()
     {

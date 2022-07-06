@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5398066426392971555}
   - component: {fileID: 5398066426392971554}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5398066426710585729}
   - component: {fileID: 5398066426710585728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,10 @@ GameObject:
   - component: {fileID: 5398066427867698425}
   - component: {fileID: 5398066427867698406}
   - component: {fileID: 5398066427867698407}
-  m_Layer: 0
+  - component: {fileID: -6559418878242957846}
+  - component: {fileID: -6095693660303197048}
+  - component: {fileID: -1722857089967548554}
+  m_Layer: 7
   m_Name: Alert Patient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +264,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b1fb64d43e75f43aa056b777f1109b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 30
-  distance: 2
   spawnpoint: {fileID: 0}
   Prefab: {fileID: 1689684385184322972, guid: b1cddf0e5800aa34b9173153239cda01, type: 3}
+--- !u!58 &-6559418878242957846
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398066427867698404}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!58 &-6095693660303197048
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398066427867698404}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &-1722857089967548554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398066427867698404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8aeae5b7a04614f89eea3bb89ba3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  startWaitTime: 0
+  moveSpots: []
