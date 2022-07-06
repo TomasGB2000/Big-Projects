@@ -26,6 +26,11 @@ public class NurseAI : MonoBehaviour
         {
             target = other.transform;
         }
+
+        if (other.gameObject.tag == "Keys")
+        {
+            target = other.transform;
+        }
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -39,6 +44,11 @@ public class NurseAI : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
+        {
+            target = null;
+        }
+
+        if (other.gameObject.tag == "Keys")
         {
             target = null;
         }

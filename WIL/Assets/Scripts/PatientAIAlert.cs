@@ -33,5 +33,9 @@ public class PatientAIAlert : MonoBehaviour
         {
             Instantiate(Prefab, spawnpoint.position, spawnpoint.rotation);
         }
+        if (other.gameObject.tag == "Keys")
+        {
+            Instantiate(Prefab, spawnpoint.position, spawnpoint.rotation);
+        }
     }
 }

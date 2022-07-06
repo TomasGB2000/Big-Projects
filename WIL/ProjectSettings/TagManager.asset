@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hiding
   - Key
+  - Keys
   layers:
   - Default
   - TransparentFX
